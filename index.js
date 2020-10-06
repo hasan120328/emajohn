@@ -31,6 +31,10 @@ client.connect(err => {
   
 });
 
+app.get('/', async (req, res) => {
+  res.send("hello from db it's working working")
+})
+
 app.get('/products',(req, res)=>{
     productsCollection.find({})
     .toArray((err,documents)=>{
